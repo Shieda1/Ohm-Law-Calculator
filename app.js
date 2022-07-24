@@ -62,7 +62,7 @@ powerRadio.addEventListener('click', function() {
 btn.addEventListener('click', function() {
   
   if(resistanceRadio.checked)
-    result.textContent = `Rresistance = ${computeRresistance().toFixed(2)} Ω`;
+    result.textContent = `Rresistance = ${computeResistance().toFixed(2)} Ω`;
 
   else if(voltageRadio.checked)
     result.textContent = `Voltage = ${computeVoltage().toFixed(2)} V`;
@@ -76,7 +76,7 @@ btn.addEventListener('click', function() {
 
 // calculation
 
-function computeRresistance() {
+function computeResistance() {
   if(Number(power.value) === 0)
     return Number(voltage.value) / Number(current.value);
 
